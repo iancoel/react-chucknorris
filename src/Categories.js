@@ -1,5 +1,6 @@
 import React from 'react';
 import Joke from './Joke';
+import { DivCategories } from './Components/DivCategories.style';
 
 const Categories = () => {
   const [joke, setJoke] = React.useState(null);
@@ -26,7 +27,7 @@ const Categories = () => {
   }
 
   return (
-    <div>
+    <DivCategories>
       <div>
         <div>
           <span>Categories:</span>
@@ -37,7 +38,7 @@ const Categories = () => {
         <button onClick={handleFetch}>Fetch</button>
       </div>
       <Joke joke={joke} />
-    </div>
+    </DivCategories>
   );
 };
 
