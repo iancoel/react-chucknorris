@@ -6,6 +6,7 @@ const App = () => {
   const bg = {
     width: '100vw',
     height: '100vh',
+    overflow: 'hidden',
     background: 'linear-gradient(145.37deg, #133488 36.16%, #E9902E 89.04%)',
   };
 

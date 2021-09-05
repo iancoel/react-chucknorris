@@ -10,7 +10,7 @@ export const Top = styled.header`
   background: #001e6c;
 
   & h1 {
-    width: 200px;
+    width: 255px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -21,5 +21,6 @@ export const Top = styled.header`
     text-align: center;
     color: #e9902e;
     cursor: default;
+    text-transform: uppercase;
   }
 `;

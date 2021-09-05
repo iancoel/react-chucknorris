@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const JokeStyle = styled.div`
   width: 81vw;
-  height: 110px;
+  height: 200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;

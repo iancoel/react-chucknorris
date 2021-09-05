@@ -7,15 +7,17 @@ const Categories = () => {
 
   let categorie;
 
-  function handleFetch() {
+  async function handleFetch() {
     if (!categorie) {
-      fetch('http://api.icndb.com/jokes/random')
-        .then((r) => r.json())
-        .then((json) => setJoke(json));
+      const response = await fetch('http://api.icndb.com/jokes/random');
+      const json = await response.json();
+      setJoke(json);
     } else {
-      fetch(`http://api.icndb.com/jokes/random?limitTo=${categorie}`)
-        .then((r) => r.json())
-        .then((json) => setJoke(json));
+      const response = await fetch(
+        `http://api.icndb.com/jokes/random?limitTo=${categorie}`,
+      );
+      const json = await response.json();
+      setJoke(json);
     }
   }
 
@@ -23,13 +25,20 @@ const Categories = () => {
     const text = target.innerText;
     if (text === 'Nerdy') return (categorie = ['nerdy']);
     if (text === 'Explicit') return (categorie = ['explicit']);
+    toggleButtonsColors(target);
     return (categorie = ['nerdy', 'explicit']);
+  }
+
+  function toggleButtonsColors(target) {
+    const buttons = document.querySelectorAll('.buttons button');
+    buttons.forEach((button) => button.classList.remove('active'));
+    target.classList.add('active');
   }
 
   return (
     <DivCategories>
       <div>
-        <div>
+        <div className={'buttons'}>
           <span>Categories:</span>
           <button onClick={handleCategorie}>Nerdy</button>
           <button onClick={handleCategorie}>Explicit</button>
