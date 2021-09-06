@@ -38,6 +38,7 @@ export const DivCategories = styled.div`
     background: #133488;
     border: none;
     margin-left: 20px;
+    margin-right: 20px;
     cursor: pointer;
     font-family: Roboto;
     font-size: 16px;
@@ -62,5 +63,31 @@ export const DivCategories = styled.div`
   & .active {
     background: #e9902e;
     color: #ffc061;
+  }
+
+  @media (max-width: 1000px) {
+    & div div {
+      width: 640px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    & div {
+      margin: 10px 0;
+    }
+    & div div {
+      flex-direction: column;
+      width: 200px;
+    }
+
+    & div div span,
+    & div div button,
+    & div button {
+      font-size: 12px;
+    }
+
+    & div div button {
+      margin-top: 20px;
+    }
   }
 `;

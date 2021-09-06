@@ -23,4 +23,10 @@ export const Top = styled.header`
     cursor: default;
     text-transform: uppercase;
   }
+
+  @media (max-width: 650px) {
+    & h1 {
+      font-size: 24px;
+    }
+  }
 `;

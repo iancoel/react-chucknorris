@@ -9,12 +9,12 @@ const Categories = () => {
 
   async function handleFetch() {
     if (!categorie) {
-      const response = await fetch('http://api.icndb.com/jokes/random');
+      const response = await fetch('https://api.icndb.com/jokes/random');
       const json = await response.json();
       setJoke(json);
     } else {
       const response = await fetch(
-        `http://api.icndb.com/jokes/random?limitTo=${categorie}`,
+        `https://api.icndb.com/jokes/random?limitTo=${categorie}`,
       );
       const json = await response.json();
       setJoke(json);
@@ -42,7 +42,9 @@ const Categories = () => {
           <span>Categories:</span>
           <button onClick={handleCategorie}>Nerdy</button>
           <button onClick={handleCategorie}>Explicit</button>
-          <button onClick={handleCategorie}>Both</button>
+          <button onClick={handleCategorie} className={'active'}>
+            Both
+          </button>
         </div>
         <button onClick={handleFetch}>Fetch</button>
       </div>

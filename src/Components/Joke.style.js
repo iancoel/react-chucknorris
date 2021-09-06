@@ -20,4 +20,11 @@ export const JokeStyle = styled.div`
     text-align: center;
     color: #e9902e;
   }
+
+  @media (max-width: 650px) {
+    & p {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
 `;
