@@ -9,7 +9,7 @@ export const DivCategories = styled.div`
   flex-direction: column;
 
   & div {
-    margin: 30px 0;
+    margin: 80px 0;
   }
 
   & div div {
@@ -25,7 +25,7 @@ export const DivCategories = styled.div`
   & div div span {
     font-family: Roboto;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 28px;
     color: #e9902e;
     cursor: default;
@@ -41,7 +41,8 @@ export const DivCategories = styled.div`
     margin-right: 20px;
     cursor: pointer;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,6 +73,11 @@ export const DivCategories = styled.div`
   }
 
   @media (max-width: 650px) {
+    & .fetch:hover {
+      background: #133488;
+      color: #ffaa4c;
+      transition: all 0s;
+    }
     & div {
       margin: 10px 0;
     }

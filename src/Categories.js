@@ -23,9 +23,9 @@ const Categories = () => {
 
   function handleCategorie({ target }) {
     const text = target.innerText;
+    toggleButtonsColors(target);
     if (text === 'Nerdy') return (categorie = ['nerdy']);
     if (text === 'Explicit') return (categorie = ['explicit']);
-    toggleButtonsColors(target);
     return (categorie = ['nerdy', 'explicit']);
   }
 
@@ -46,7 +46,9 @@ const Categories = () => {
             Both
           </button>
         </div>
-        <button onClick={handleFetch}>Fetch</button>
+        <button onClick={handleFetch} className={'fetch'}>
+          Fetch
+        </button>
       </div>
       <Joke joke={joke} />
     </DivCategories>

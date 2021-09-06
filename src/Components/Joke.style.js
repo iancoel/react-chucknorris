@@ -13,7 +13,7 @@ export const JokeStyle = styled.div`
 
   & p {
     font-family: Times New Roman;
-    font-size: 24px;
+    font-size: 32px;
     line-height: 28px;
     display: flex;
     align-items: center;
