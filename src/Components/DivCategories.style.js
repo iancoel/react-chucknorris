@@ -9,7 +9,7 @@ export const DivCategories = styled.div`
   flex-direction: column;
 
   & div {
-    margin: 80px 0;
+    margin: 30px 0;
   }
 
   & div div {
